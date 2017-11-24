@@ -43,7 +43,7 @@ with open('medline_diseases.csv', 'a') as the_file:
 			disClient.close()
 			dis_soup = soup(dis_html, "html.parser")
 			summary_container = dis_soup.findAll("div", {"id": "topic-summary"})
-			summary = summary_container[0].p.text
+			summary = summary_container[0].text
 			print "summary: " + summary
 
 		# print "disease_url: " + disease_url
