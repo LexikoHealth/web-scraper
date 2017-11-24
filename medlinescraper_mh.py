@@ -48,7 +48,9 @@ with open('medline_diseases.csv', 'a') as the_file:
 
 		# print "disease_url: " + disease_url
 
-			the_file.write(disease + "," + disease_url + "," + summary.replace(",", ";") + "\n")
+			summary = ''.join(s for s in summary if ord(s)>31 and ord(s)<126).replace(",", ";").rstrip().encode('utf-8')
+
+			the_file.write(disease.encode('utf-8') + "," + disease_url.encode('utf-8') + "," + summary + "\n")
 
 the_file.close()
 
