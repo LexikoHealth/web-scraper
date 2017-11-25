@@ -64,4 +64,6 @@ with open('webmd_diseases.csv', 'a') as the_file:
 
 the_file.close()
 
-#Need to also add this to mongodb
+# To do:
+# Need to also add this to mongodb
+# Need to add letters B-Z
